@@ -4,6 +4,7 @@
     "description": "Shared React components for ZeroTurnaround products",
     "license": "TODO",
     "main": "lib/index.js",
+    "files": ["dist", "lib", "src"],
     "scripts": {
         "build": "npm run build:commonjs && npm run build:umd",
 
@@ -21,7 +22,6 @@
 
         "prepublish": "npm test && npm run lint && npm run build"
     },
-    "files": ["dist", "lib", "src"],
     "dependencies": {
         "react": "^15.5.4",
         "styled-components": "^2.0.1"
