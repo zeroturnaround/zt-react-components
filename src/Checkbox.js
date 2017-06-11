@@ -8,14 +8,34 @@ const Checkbox = styled.span`
 
     margin-right: 7px;
 
-    border: 1px solid;
+    border: 1px solid ${({checked}) => checked ? "#000" : "#999"};
     border-radius: 4px;
 
-    width: ${(props) => props.size === "large" ? "16px" : "12px"};
-    height: ${(props) => props.size === "large" ? "16px" : "12px"};
-    font-size: ${(props) => props.size === "large" ? "16px" : "12px"};
+    background-color: ${({disabled}) => disabled ? "#f3f3f3" : "#fff"};
 
-    border-color: ${props => props.checked ? "#000" : "#999"};
+    width: ${({size}) => size === "large" ? "14px" : "12px"};
+    height: ${({size}) => size === "large" ? "14px" : "12px"};
+    font-size: ${({size}) => size === "large" ? "14px" : "12px"};
+
+    &:before {
+        content: "${({checked}) => checked ? "✓" : ""}";
+    }
+
+    label:hover > &:not([disabled]) {
+        border-color: #000;
+    }
 `;
 
-export default ({checked, size}) => <Checkbox checked={checked} size={size} />;
+export default ({name, checked, size, disabled}) => (
+    <Checkbox
+        checked={checked}
+        size={size}
+        disabled={disabled}
+    >
+        <input
+            type="hidden"
+            name={name}
+            value={checked}
+        />
+    </Checkbox>
+);

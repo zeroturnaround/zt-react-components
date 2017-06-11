@@ -58,22 +58,24 @@
         <section>
             <h2>Checkboxes</h2>
 
-            <label>
-                <span id="unchecked-checkbox"></span>
+            <label id="unchecked-checkbox">
                 <script>render("unchecked-checkbox", Checkbox)</script>
-                Unchecked checkbox
+                Unchecked
             </label>
 
-            <label>
-                <span id="checked-checkbox"></span>
+            <label id="checked-checkbox">
                 <script>render("checked-checkbox", Checkbox, {checked: true})</script>
-                Checked checkbox
+                Checked
             </label>
 
-            <label style="font-size: 16px">
-                <span id="large-checkbox"></span>
+            <label id="disabled-checkbox">
+                <script>render("disabled-checkbox", Checkbox, {disabled: true})</script>
+                Disabled
+            </label>
+
+            <label id="large-checkbox" style="font-size: 14px">
                 <script>render("large-checkbox", Checkbox, {size: "large"})</script>
-                Large checkbox
+                Large
             </label>
         </section>
     </main>
