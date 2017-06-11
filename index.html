@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="https://static.zeroturnaround.com/theme55/images/favicon.ico">
+
+    <title>ZeroTurnaround React Components</title>
+
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial;
+            font-size: 12px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.75em;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        .zt-logo {
+            text-decoration: none;
+            color: #000;
+        }
+        .zt-logo:before {
+            content: "Zero";
+            color: #95c11f;
+        }
+    </style>
+
+    <script src="https://unpkg.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.1/dist/react-dom.js"></script>
+    <script src="dist/zt-react-components.js"></script>
+    <script>
+        function render(parent, element, props) {
+            ReactDOM.render(
+                React.createElement(element, props),
+                document.getElementById(parent)
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        <a class="zt-logo" href="https://zeroturnaround.com">Turnaround</a> React components
+    </h1>
+
+    <main>
+        <section>
+            <h2>Checkboxes</h2>
+
+            <label>
+                <span id="unchecked-checkbox"></span>
+                <script>render("unchecked-checkbox", Checkbox)</script>
+                Unchecked checkbox
+            </label>
+
+            <label>
+                <span id="checked-checkbox"></span>
+                <script>render("checked-checkbox", Checkbox, {checked: true})</script>
+                Checked checkbox
+            </label>
+
+            <label style="font-size: 16px">
+                <span id="large-checkbox"></span>
+                <script>render("large-checkbox", Checkbox, {size: "large"})</script>
+                Large checkbox
+            </label>
+        </section>
+    </main>
+</body>
+</html>
