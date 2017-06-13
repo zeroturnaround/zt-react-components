@@ -1,7 +1,7 @@
 import "jest-styled-components";
 import React from "react";
 import renderer from "react-test-renderer";
-import Checkbox from "../src/Checkbox";
+import Checkbox from "../../src/common/Checkbox";
 
 describe("<Checkbox />", function() {
     it("renders styled span element with hidden input", function() {
