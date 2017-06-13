@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HitSampling /> renders hit sampling component 1`] = `
+.gBcRit {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 0.5px;
+  font-size: 11px;
+  color: #929fa4;
+  font-family: Helvetica;
+}
+
+.gBcRit .time {
+  color: #5c6a70;
+}
+
+<div
+  className="sc-bdVaJa gBcRit"
+  style={
+    Object {
+      "right": 15,
+      "top": 20,
+    }
+  }
+>
+  42
+   similar 
+  hits
+   
+  <span
+    className="time"
+  >
+    05:25:45
+     - 
+    05:26:05
+  </span>
+</div>
+`;

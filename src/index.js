@@ -1,5 +1,11 @@
 import Checkbox from "./Checkbox";
 
+// XRebel-XHub
+import HitSampling from "./xr/HitSampling";
+
 export {
-    Checkbox
+    Checkbox,
+
+    // XRebel-XHub
+    HitSampling,
 };
