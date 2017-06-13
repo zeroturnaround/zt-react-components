@@ -42,5 +42,8 @@
     },
     "jest": {
         "testEnvironment": "node"
+    },
+    "peerDependencies": {
+        "moment": "^2.18.1"
     }
 }
