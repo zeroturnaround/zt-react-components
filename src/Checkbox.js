@@ -42,12 +42,19 @@ export default class Checkbox extends PureComponent {
                 disabled={this.props.disabled}
             >
                 {this.props.checked && <Checkmark />}
-                <input
-                    type="hidden"
-                    name={this.props.name}
-                    value={this.props.checked}
-                />
+                {this.props.name && this.renderHiddenInput()}
             </CheckboxElement>
+        );
+    }
+
+    renderHiddenInput() {
+        return (
+            <input
+                type="hidden"
+                name={this.props.name}
+                value={this.props.checked}
+                onClick={(event) => event.stopPropagation()}
+            />
         );
     }
 }

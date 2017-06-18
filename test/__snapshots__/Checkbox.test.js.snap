@@ -44,11 +44,6 @@ exports[`<Checkbox /> renders checked 1`] = `
       fillRule="evenodd"
     />
   </svg>
-  <input
-    name={undefined}
-    type="hidden"
-    value={true}
-  />
 </span>
 `;
 
@@ -80,13 +75,7 @@ exports[`<Checkbox /> renders disabled 1`] = `
   className="sc-bdVaJa hTZnim"
   disabled={true}
   size={undefined}
->
-  <input
-    name={undefined}
-    type="hidden"
-    value={undefined}
-  />
-</span>
+/>
 `;
 
 exports[`<Checkbox /> renders larger 1`] = `
@@ -117,13 +106,7 @@ exports[`<Checkbox /> renders larger 1`] = `
   className="sc-bdVaJa hnoCGB"
   disabled={undefined}
   size="large"
->
-  <input
-    name={undefined}
-    type="hidden"
-    value={undefined}
-  />
-</span>
+/>
 `;
 
 exports[`<Checkbox /> renders styled span element with hidden input 1`] = `
@@ -157,6 +140,7 @@ exports[`<Checkbox /> renders styled span element with hidden input 1`] = `
 >
   <input
     name="test"
+    onClick={[Function]}
     type="hidden"
     value={undefined}
   />
