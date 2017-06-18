@@ -22,6 +22,7 @@
         "prepublish": "npm test && npm run lint && npm run build"
     },
     "dependencies": {
+        "prop-types": "^15.5.10",
         "react": "^15.5.4",
         "styled-components": "^2.0.1"
     },
@@ -30,6 +31,7 @@
         "babel-eslint": "^7.2.3",
         "babel-loader": "^7.0.0",
         "babel-plugin-inline-react-svg": "^0.4.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-env": "^1.5.2",
         "babel-preset-react": "^6.24.1",
         "eslint": "^3.19.0",

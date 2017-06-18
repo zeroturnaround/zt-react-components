@@ -1,9 +1,10 @@
-import React from "react";
+import React, {PureComponent} from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import {borderRadiuses, colors, fontSizes} from "./designGuideline";
 import Checkmark from "./icons/checkmark.svg";
 
-const Checkbox = styled.span`
+const CheckboxElement = styled.span`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -24,17 +25,29 @@ const Checkbox = styled.span`
     }
 `;
 
-export default ({name, checked, size, disabled}) => (
-    <Checkbox
-        checked={checked}
-        size={size}
-        disabled={disabled}
-    >
-        {checked && <Checkmark />}
-        <input
-            type="hidden"
-            name={name}
-            value={checked}
-        />
-    </Checkbox>
-);
+export default class Checkbox extends PureComponent {
+    static propTypes = {
+        name: PropTypes.string,
+        // small or large
+        size: PropTypes.string,
+        checked: PropTypes.bool,
+        disabled: PropTypes.bool
+    };
+
+    render() {
+        return (
+            <CheckboxElement
+                checked={this.props.checked}
+                size={this.props.size}
+                disabled={this.props.disabled}
+            >
+                {this.props.checked && <Checkmark />}
+                <input
+                    type="hidden"
+                    name={this.props.name}
+                    value={this.props.checked}
+                />
+            </CheckboxElement>
+        );
+    }
+}

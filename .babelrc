@@ -1,5 +1,8 @@
 {
-    "plugins": ["inline-react-svg"],
+    "plugins": [
+        "inline-react-svg",
+        "transform-class-properties"
+    ],
     "presets": [
         "react",
         [
