@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {borderRadiuses, colors, fontSizes} from "./designGuideline";
 
 const Checkbox = styled.span`
     display: inline-flex;
@@ -8,14 +9,14 @@ const Checkbox = styled.span`
 
     margin-right: 7px;
 
-    border: 1px solid ${({checked}) => checked ? "#000" : "#999"};
-    border-radius: 4px;
+    border: 1px solid ${({checked}) => checked ? colors.black : colors.gray};
+    border-radius: ${borderRadiuses.default};
 
-    background-color: ${({disabled}) => disabled ? "#f3f3f3" : "#fff"};
+    background-color: ${({disabled}) => disabled ? colors.darkerWhite : colors.white};
 
-    width: ${({size}) => size === "large" ? "14px" : "12px"};
-    height: ${({size}) => size === "large" ? "14px" : "12px"};
-    font-size: ${({size}) => size === "large" ? "14px" : "12px"};
+    width: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
+    height: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
+    font-size: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
 
     &:before {
         content: "${({checked}) => checked ? "✓" : ""}";
