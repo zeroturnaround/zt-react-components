@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {borderRadiuses, colors, fontSizes} from "./designGuideline";
+import Checkmark from "./icons/checkmark.svg";
 
 const Checkbox = styled.span`
     display: inline-flex;
@@ -18,10 +19,6 @@ const Checkbox = styled.span`
     height: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
     font-size: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
 
-    &:before {
-        content: "${({checked}) => checked ? "✓" : ""}";
-    }
-
     label:hover > &:not([disabled]) {
         border-color: #000;
     }
@@ -33,6 +30,7 @@ export default ({name, checked, size, disabled}) => (
         size={size}
         disabled={disabled}
     >
+        {checked && <Checkmark />}
         <input
             type="hidden"
             name={name}

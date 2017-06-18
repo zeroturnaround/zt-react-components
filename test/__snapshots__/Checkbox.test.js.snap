@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox /> renders checked 1`] = `
-.bhFGJW {
+.gLVrHx {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -23,16 +23,27 @@ exports[`<Checkbox /> renders checked 1`] = `
   font-size: 12px;
 }
 
-.bhFGJW:before {
-  content: "✓";
-}
-
 <span
   checked={true}
-  className="sc-bdVaJa bhFGJW"
+  className="sc-bdVaJa gLVrHx"
   disabled={undefined}
   size={undefined}
 >
+  <svg
+    height="7"
+    viewBox="0 0 9 7"
+    width="9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      P
+    </title>
+    <path
+      d="M8.807.477A.625.625 0 0 0 8.35.283a.57.57 0 0 0-.44.194L3.217 5.17 1.09 3.043a.596.596 0 0 0-.44-.176.657.657 0 0 0-.457.176A.625.625 0 0 0 0 3.5c0 .176.064.328.193.457L2.76 6.523a.625.625 0 0 0 .457.194.57.57 0 0 0 .44-.194l5.15-5.15a.615.615 0 0 0 0-.896z"
+      fill="#2F333D"
+      fillRule="evenodd"
+    />
+  </svg>
   <input
     name={undefined}
     type="hidden"
@@ -42,7 +53,7 @@ exports[`<Checkbox /> renders checked 1`] = `
 `;
 
 exports[`<Checkbox /> renders disabled 1`] = `
-.OiyCY {
+.hTZnim {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -64,13 +75,9 @@ exports[`<Checkbox /> renders disabled 1`] = `
   font-size: 12px;
 }
 
-.OiyCY:before {
-  content: "";
-}
-
 <span
   checked={undefined}
-  className="sc-bdVaJa OiyCY"
+  className="sc-bdVaJa hTZnim"
   disabled={true}
   size={undefined}
 >
@@ -83,7 +90,7 @@ exports[`<Checkbox /> renders disabled 1`] = `
 `;
 
 exports[`<Checkbox /> renders larger 1`] = `
-.kYVBFU {
+.hnoCGB {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -105,13 +112,9 @@ exports[`<Checkbox /> renders larger 1`] = `
   font-size: 14px;
 }
 
-.kYVBFU:before {
-  content: "";
-}
-
 <span
   checked={undefined}
-  className="sc-bdVaJa kYVBFU"
+  className="sc-bdVaJa hnoCGB"
   disabled={undefined}
   size="large"
 >
@@ -124,7 +127,7 @@ exports[`<Checkbox /> renders larger 1`] = `
 `;
 
 exports[`<Checkbox /> renders styled span element with hidden input 1`] = `
-.cjtnSO {
+.ldAYDL {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -146,13 +149,9 @@ exports[`<Checkbox /> renders styled span element with hidden input 1`] = `
   font-size: 12px;
 }
 
-.cjtnSO:before {
-  content: "";
-}
-
 <span
   checked={undefined}
-  className="sc-bdVaJa cjtnSO"
+  className="sc-bdVaJa ldAYDL"
   disabled={undefined}
   size={undefined}
 >

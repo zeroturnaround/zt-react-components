@@ -18,4 +18,4 @@ export {
     borderRadiuses,
     colors,
     fontSizes,
-}
+};
