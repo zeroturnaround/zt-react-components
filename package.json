@@ -19,7 +19,7 @@
         "test:watch": "jest --watch",
         "test:update": "jest --u",
         "lint": "eslint .",
-        "prepublishOnly": "npm test && npm run lint && npm run build"
+        "prepublish": "npm run build"
     },
     "repository": {
         "type": "git",
