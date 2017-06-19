@@ -25,6 +25,15 @@ const CheckboxElement = styled.span`
     }
 `;
 
+/**
+ * Very sexy and simple checkbox (actually span) that can be:
+ * - a bit larger,
+ * - disabled,
+ * - and of course checked.
+ *
+ * NOTE: Render it inside of label to enable unbelievable hover styles.
+ * NOTE: Give it a name and you will get a hidden input for free!
+ */
 export default class Checkbox extends PureComponent {
     static propTypes = {
         name: PropTypes.string,
