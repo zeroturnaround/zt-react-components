@@ -25,4 +25,4 @@ All of the components are listed in [index.js](https://github.com/ukupat/zt-reac
 
 ## License
 
-TODO
+[Apache-2.0](https://github.com/zeroturnaround/zt-react-components/blob/master/LICENSE)
