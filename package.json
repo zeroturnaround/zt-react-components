@@ -1,8 +1,8 @@
 {
     "name": "zt-react-components",
     "version": "0.0.0",
-    "description": "Shared React components for ZeroTurnaround products",
-    "license": "TODO",
+    "description": "Commonly used React components for ZeroTurnaround products",
+    "license": "Apache-2.0",
     "main": "lib/index.js",
     "files": [
         "dist",
@@ -20,6 +20,10 @@
         "test:update": "jest --u",
         "lint": "eslint .",
         "prepublishOnly": "npm test && npm run lint && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zeroturnaround/zt-react-components.git"
     },
     "dependencies": {
         "prop-types": "^15.5.10",
