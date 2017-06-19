@@ -4,8 +4,8 @@ Commonly used React components for ZeroTurnaround products.
 
 ## Install
 
-```
-npm install --save zt-react-components
+```shell
+yarn add zt-react-components
 ```
 
 ## Usage
