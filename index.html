@@ -26,13 +26,22 @@
             align-items: center;
             margin-bottom: 1em;
         }
-        .zt-logo {
-            text-decoration: none;
-            color: #000;
-        }
-        .zt-logo:before {
-            content: "Zero";
+        .green {
             color: #95c11f;
+        }
+        .zt-link, .github-link {
+            position: fixed;
+            bottom: 15px;
+            opacity: 0.3;
+        }
+        .zt-link:hover, .github-link:hover {
+            opacity: 1;
+        }
+        .zt-link {
+            right: 15px;
+        }
+        .github-link {
+            right: 60px;
         }
     </style>
 
@@ -51,13 +60,15 @@
 </head>
 
 <body>
-    <h1>
-        <a class="zt-logo" href="https://zeroturnaround.com">Turnaround</a> React components
-    </h1>
+    <header>
+        <h1>
+            <span class="green">Zero</span>Turnaround React components
+        </h1>
+    </header>
 
     <main>
         <section>
-            <h2>Checkboxes</h2>
+            <h2>Checkbox</h2>
 
             <label id="unchecked-checkbox">
                 <script>render("unchecked-checkbox", Checkbox)</script>
@@ -80,5 +91,13 @@
             </label>
         </section>
     </main>
+    <footer>
+        <a class="zt-link" href="https://zeroturnaround.com">
+            <img src="https://zeroturnaround.com/wp-content/uploads/2015/01/zt-ring.png" width="30" />
+        </a>
+        <a class="github-link" href="https://github.com/zeroturnaround/zt-react-components">
+            <img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="30" />
+        </a>
+    </footer>
 </body>
 </html>
