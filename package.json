@@ -21,7 +21,7 @@
     "lint": "eslint .",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o doc"
+    "build-storybook": "build-storybook -o docs"
   },
   "repository": {
     "type": "git",
