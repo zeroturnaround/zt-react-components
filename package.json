@@ -5,16 +5,12 @@
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "files": [
-    "dist",
     "lib",
     "src"
   ],
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:umd",
-    "build:commonjs": "babel src -d lib",
-    "build:commonjs:watch": "npm run build -- --watch",
-    "build:umd": "webpack src/index.js dist/zt-react-components.js",
-    "build:umd:watch": "npm run build:umd -- --watch",
+    "build": "babel src -d lib",
+    "build:watch": "npm run build -- --watch",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest --u",
@@ -48,8 +44,7 @@
     "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.4",
     "jest-styled-components": "next",
-    "react-test-renderer": "^15.5.4",
-    "webpack": "^2.6.1"
+    "react-test-renderer": "^15.5.4"
   },
   "jest": {
     "testEnvironment": "node"
