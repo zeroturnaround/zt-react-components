@@ -11,13 +11,13 @@
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "npm run build -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "docs": "build-storybook -o docs",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest --u",
     "lint": "eslint .",
     "prepublish": "npm run build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs"
   },
   "repository": {
     "type": "git",
