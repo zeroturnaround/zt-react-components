@@ -32,7 +32,13 @@ const CheckboxElement = styled.span`
  * - and of course checked.
  *
  * NOTE: Render it inside of label to enable unbelievable hover styles.
+ *
  * NOTE: Give it a name and you will get a hidden input for free!
+ * Hidden input is for forms where it is needed to post form data.
+ *
+ * NOTE: Click on hidden input stops propagation because of IE:
+ * by default clicking on a label will make the event to propagate to a child input.
+ * Then the input will bubble it back to the label, causing another click event.
  */
 export default class Checkbox extends PureComponent {
     static propTypes = {
