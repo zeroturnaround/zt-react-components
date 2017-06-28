@@ -10,16 +10,16 @@
         "src"
     ],
     "scripts": {
-        "build": "npm run build:commonjs && npm run build:umd",
+        "build": "yarn build:commonjs && yarn build:umd",
         "build:commonjs": "babel src -d lib",
-        "build:commonjs:watch": "npm run build -- --watch",
+        "build:commonjs:watch": "yarn build -- --watch",
         "build:umd": "webpack src/index.js dist/zt-react-components.js",
-        "build:umd:watch": "npm run build:umd -- --watch",
+        "build:umd:watch": "yarn build:umd -- --watch",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:update": "jest --u",
         "lint": "eslint .",
-        "prepublish": "npm run build"
+        "prepublish": "yarn build"
     },
     "repository": {
         "type": "git",
