@@ -25,9 +25,11 @@
         "type": "git",
         "url": "https://github.com/zeroturnaround/zt-react-components.git"
     },
+    "peerDependencies": {
+        "react": ">=15.0.0"
+    },
     "dependencies": {
         "prop-types": "^15.5.10",
-        "react": "^15.5.4",
         "styled-components": "^2.0.1"
     },
     "devDependencies": {
@@ -43,6 +45,7 @@
         "eslint-plugin-react": "^7.0.1",
         "jest": "^20.0.4",
         "jest-styled-components": "next",
+        "react": "^15.6.1",
         "react-test-renderer": "^15.5.4",
         "webpack": "^2.6.1"
     },
