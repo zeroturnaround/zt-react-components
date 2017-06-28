@@ -19,4 +19,13 @@ describe("<Checkbox />", function() {
     it("renders larger", function() {
         expect(renderer.create(<Checkbox size="large" />)).toMatchSnapshot();
     });
+
+    it("stops hidden input event propagation on click", function() {
+        const checkbox = renderer.create(<Checkbox name="test" />);
+        const stopPropagation = jasmine.createSpy("stopPropagation");
+
+        checkbox.toJSON().children[0].props.onClick({stopPropagation});
+
+        expect(stopPropagation).toHaveBeenCalled();
+    });
 });
