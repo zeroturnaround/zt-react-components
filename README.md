@@ -7,7 +7,7 @@ Commonly used React components for ZeroTurnaround products.
 ## Install
 
 ```shell
-yarn add react zt-react-components
+yarn add zt-react-components
 ```
 
 ## Usage
