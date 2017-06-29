@@ -4,6 +4,9 @@ node_js:
 cache:
   directories:
     - node_modules
+
+# Travis will publish a new version to NPM when a new tag is added.
+# Tag value will be used as a version number which is written into package.json before deploy.
 before_deploy: |
   node -e 'require("fs").writeFileSync("package.json", JSON.stringify(Object.assign(require("./package"), {version: process.env.TRAVIS_TAG})))'
 deploy:
