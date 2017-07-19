@@ -55,6 +55,7 @@ export default class Checkbox extends PureComponent {
                 checked={this.props.checked}
                 size={this.props.size}
                 disabled={this.props.disabled}
+                data-test-checkbox-checked={this.props.checked}
             >
                 {this.props.checked && <Checkmark />}
                 {this.props.name && this.renderHiddenInput()}
