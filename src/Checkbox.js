@@ -50,24 +50,28 @@ export default class Checkbox extends PureComponent {
     };
 
     render() {
+        const { checked, name, size, disabled } = this.props;
+
         return (
             <CheckboxElement
-                checked={this.props.checked}
-                size={this.props.size}
-                disabled={this.props.disabled}
+                checked={checked}
+                size={size}
+                disabled={disabled}
             >
-                {this.props.checked && <Checkmark />}
-                {this.props.name && this.renderHiddenInput()}
+                {checked && <Checkmark />}
+                {name && this.renderHiddenInput()}
             </CheckboxElement>
         );
     }
 
     renderHiddenInput() {
+        const { checked, name } = this.props;
+
         return (
             <input
                 type="hidden"
-                name={this.props.name}
-                value={this.props.checked}
+                name={name}
+                value={checked}
                 onClick={(event) => event.stopPropagation()}
             />
         );
