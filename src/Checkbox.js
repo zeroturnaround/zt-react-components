@@ -25,6 +25,10 @@ const CheckboxElement = styled.span`
     }
 `;
 
+const Input = styled.input`
+    display: none
+`;
+
 /**
  * Very sexy and simple checkbox (actually span) that can be:
  * - a bit larger,
@@ -49,7 +53,7 @@ export default class Checkbox extends PureComponent {
     };
 
     render() {
-        const { checked, name, size, disabled } = this.props;
+        const { checked, size, disabled, ...props } = this.props;
 
         return (
             <CheckboxElement
@@ -58,21 +62,14 @@ export default class Checkbox extends PureComponent {
                 disabled={disabled}
             >
                 {checked && <Checkmark />}
-                {name && this.renderHiddenInput()}
+
+                <Input
+                    type="checkbox"
+                    name={name}
+                    value={checked}
+                    {...props}
+                />
             </CheckboxElement>
-        );
-    }
-
-    renderHiddenInput() {
-        const { checked, name } = this.props;
-
-        return (
-            <input
-                type="hidden"
-                name={name}
-                value={checked}
-                onClick={(event) => event.stopPropagation()}
-            />
         );
     }
 }
