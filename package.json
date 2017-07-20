@@ -1,55 +1,55 @@
 {
-    "name": "zt-react-components",
-    "version": "0.0.0",
-    "description": "Commonly used React components for ZeroTurnaround products",
-    "license": "Apache-2.0",
-    "main": "lib/index.js",
-    "files": [
-        "dist",
-        "lib",
-        "src"
-    ],
-    "scripts": {
-        "build": "yarn build:commonjs && yarn build:umd",
-        "build:commonjs": "babel src -d lib",
-        "build:commonjs:watch": "yarn build -- --watch",
-        "build:umd": "webpack src/index.js dist/zt-react-components.js",
-        "build:umd:watch": "yarn build:umd -- --watch",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:update": "jest --u",
-        "lint": "eslint .",
-        "prepublish": "yarn build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zeroturnaround/zt-react-components.git"
-    },
-    "peerDependencies": {
-        "react": ">=15.0.0"
-    },
-    "dependencies": {
-        "prop-types": "^15.5.10",
-        "styled-components": "^2.0.1"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.24.1",
-        "babel-eslint": "^7.2.3",
-        "babel-loader": "^7.0.0",
-        "babel-plugin-inline-react-svg": "^0.4.0",
-        "babel-plugin-transform-class-properties": "^6.24.1",
-        "babel-preset-env": "^1.5.2",
-        "babel-preset-react": "^6.24.1",
-        "eslint": "^3.19.0",
-        "eslint-config-zt": "^1.4.0",
-        "eslint-plugin-react": "^7.0.1",
-        "jest": "^20.0.4",
-        "jest-styled-components": "next",
-        "react": "^15.6.1",
-        "react-test-renderer": "^15.5.4",
-        "webpack": "^2.6.1"
-    },
-    "jest": {
-        "testEnvironment": "node"
-    }
+  "name": "zt-react-components",
+  "version": "0.0.0",
+  "description": "Commonly used React components for ZeroTurnaround products",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "babel src -d lib",
+    "build:watch": "npm run build -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "docs": "build-storybook -o docs",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest --u",
+    "lint": "eslint .",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeroturnaround/zt-react-components.git"
+  },
+  "peerDependencies": {
+    "react": ">=15.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "styled-components": "^2.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-options": "^3.1.5",
+    "@storybook/react": "^3.1.5",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-inline-react-svg": "^0.4.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-zt": "^1.4.0",
+    "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.4",
+    "jest-styled-components": "next",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.5.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }

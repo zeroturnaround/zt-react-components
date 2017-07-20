@@ -2,21 +2,13 @@
 
 Fork, commit and make a PR. Below are commands that help you with the development.
 
-## Build
-
 ```shell
-$ yarn build # Build both commonjs and umd packages
+$ yarn build # Build code for other projects
+$ yarn build:watch
 
-$ yarn build:commonjs # Build code for other projects
-$ yarn build:commonjs:watch
+$ yarn storybook # Start https://storybook.js.org/
+$ yarn docs # Generate new docs
 
-$ yarn build:umd # Build code for demo page
-$ yarn build:umd:watch
-```
-
-## Test
-
-```shell
 $ yarn test # Run Jest tests once
 $ yarn test:watch
 $ yarn test:update # Update outdated snapshots
