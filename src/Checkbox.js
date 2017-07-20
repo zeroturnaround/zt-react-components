@@ -85,10 +85,10 @@ export default class Checkbox extends PureComponent {
                 <Input
                     {...props}
                     type="checkbox"
-                    name={name}
                     value={isChecked}
                     checked={isChecked}
                     onChange={this.onChange.bind(this)}
+                    onClick={ evt => evt.stopPropagation() }
                     disabled={disabled}
                 />
             </CheckboxElement>
