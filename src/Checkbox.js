@@ -43,8 +43,7 @@ const CheckboxElement = styled.span`
 export default class Checkbox extends PureComponent {
     static propTypes = {
         name: PropTypes.string,
-        // small or large
-        size: PropTypes.string,
+        size: PropTypes.oneOf(["small", "large"]),
         checked: PropTypes.bool,
         disabled: PropTypes.bool
     };
