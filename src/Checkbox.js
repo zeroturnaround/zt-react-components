@@ -46,28 +46,53 @@ const Input = styled.input`
  */
 export default class Checkbox extends PureComponent {
     static propTypes = {
-        name: PropTypes.string,
         size: PropTypes.oneOf(["small", "large"]),
         checked: PropTypes.bool,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        onChange: PropTypes.func
     };
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isChecked: !!props.checked
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.checked !== this.props.checked) {
+            this.setState({isChecked: nextProps.checked});
+        }
+    }
+
+    onChange(evt) {
+        const {onChange} = this.props;
+
+        this.setState({isChecked: evt.target.checked});
+        onChange && onChange(evt);
+    }
+
     render() {
-        const { checked, size, disabled, ...props } = this.props;
+        const { size, disabled, ...props } = this.props;
+        const { isChecked } = this.state;
 
         return (
             <CheckboxElement
-                checked={checked}
+                checked={isChecked}
                 size={size}
                 disabled={disabled}
             >
-                {checked && <Checkmark />}
+                {isChecked && <Checkmark />}
 
                 <Input
+                    {...props}
                     type="checkbox"
                     name={name}
-                    value={checked}
-                    {...props}
+                    value={isChecked}
+                    checked={isChecked}
+                    onChange={this.onChange.bind(this)}
+                    disabled={disabled}
                 />
             </CheckboxElement>
         );
