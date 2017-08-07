@@ -14,7 +14,7 @@ const CheckboxElement = styled.span`
     border: 1px solid ${({checked}) => checked ? colors.black : colors.gray};
     border-radius: ${borderRadiuses.default};
 
-    background-color: ${({disabled}) => disabled ? colors.darkerWhite : colors.white};
+    background-color: ${({disabled}) => disabled && colors.darkerWhite};
 
     width: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
     height: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
