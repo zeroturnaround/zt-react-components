@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox /> renders checked 1`] = `
-.cDCEzS {
+.hWREuk {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,6 +14,7 @@ exports[`<Checkbox /> renders checked 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   margin-right: 7px;
   border: 1px solid #000;
   border-radius: 4px;
@@ -23,7 +24,11 @@ exports[`<Checkbox /> renders checked 1`] = `
   font-size: 12px;
 }
 
-.cDCEzS:hover:not([disabled]) {
+.hWREuk svg {
+  opacity: 1;
+}
+
+.hWREuk:hover:not([disabled]) {
   border-color: #000;
 }
 
@@ -38,7 +43,7 @@ exports[`<Checkbox /> renders checked 1`] = `
 
 <span
   checked={true}
-  className="sc-bdVaJa cDCEzS"
+  className="sc-bdVaJa hWREuk"
   disabled={undefined}
   size={undefined}
 >
@@ -62,7 +67,6 @@ exports[`<Checkbox /> renders checked 1`] = `
     className="sc-bwzfXH ewegQT"
     disabled={undefined}
     onChange={[Function]}
-    onClick={[Function]}
     type="checkbox"
     value={true}
   />
@@ -70,7 +74,7 @@ exports[`<Checkbox /> renders checked 1`] = `
 `;
 
 exports[`<Checkbox /> renders disabled 1`] = `
-.jiNQyH {
+.hNthpQ {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -83,6 +87,7 @@ exports[`<Checkbox /> renders disabled 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   margin-right: 7px;
   border: 1px solid #999;
   border-radius: 4px;
@@ -92,7 +97,11 @@ exports[`<Checkbox /> renders disabled 1`] = `
   font-size: 12px;
 }
 
-.jiNQyH:hover:not([disabled]) {
+.hNthpQ svg {
+  opacity: 0;
+}
+
+.hNthpQ:hover:not([disabled]) {
   border-color: #000;
 }
 
@@ -106,25 +115,39 @@ exports[`<Checkbox /> renders disabled 1`] = `
 }
 
 <span
-  checked={false}
-  className="sc-bdVaJa jiNQyH"
+  checked={undefined}
+  className="sc-bdVaJa hNthpQ"
   disabled={true}
   size={undefined}
 >
+  <svg
+    height="7"
+    viewBox="0 0 9 7"
+    width="9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      P
+    </title>
+    <path
+      d="M8.807.477A.625.625 0 0 0 8.35.283a.57.57 0 0 0-.44.194L3.217 5.17 1.09 3.043a.596.596 0 0 0-.44-.176.657.657 0 0 0-.457.176A.625.625 0 0 0 0 3.5c0 .176.064.328.193.457L2.76 6.523a.625.625 0 0 0 .457.194.57.57 0 0 0 .44-.194l5.15-5.15a.615.615 0 0 0 0-.896z"
+      fill="#2F333D"
+      fillRule="evenodd"
+    />
+  </svg>
   <input
-    checked={false}
+    checked={undefined}
     className="sc-bwzfXH ewegQT"
     disabled={true}
     onChange={[Function]}
-    onClick={[Function]}
     type="checkbox"
-    value={false}
+    value={undefined}
   />
 </span>
 `;
 
 exports[`<Checkbox /> renders larger 1`] = `
-.fVsyKZ {
+.gDgQzI {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -137,6 +160,7 @@ exports[`<Checkbox /> renders larger 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   margin-right: 7px;
   border: 1px solid #999;
   border-radius: 4px;
@@ -146,7 +170,11 @@ exports[`<Checkbox /> renders larger 1`] = `
   font-size: 14px;
 }
 
-.fVsyKZ:hover:not([disabled]) {
+.gDgQzI svg {
+  opacity: 0;
+}
+
+.gDgQzI:hover:not([disabled]) {
   border-color: #000;
 }
 
@@ -160,25 +188,39 @@ exports[`<Checkbox /> renders larger 1`] = `
 }
 
 <span
-  checked={false}
-  className="sc-bdVaJa fVsyKZ"
+  checked={undefined}
+  className="sc-bdVaJa gDgQzI"
   disabled={undefined}
   size="large"
 >
+  <svg
+    height="7"
+    viewBox="0 0 9 7"
+    width="9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      P
+    </title>
+    <path
+      d="M8.807.477A.625.625 0 0 0 8.35.283a.57.57 0 0 0-.44.194L3.217 5.17 1.09 3.043a.596.596 0 0 0-.44-.176.657.657 0 0 0-.457.176A.625.625 0 0 0 0 3.5c0 .176.064.328.193.457L2.76 6.523a.625.625 0 0 0 .457.194.57.57 0 0 0 .44-.194l5.15-5.15a.615.615 0 0 0 0-.896z"
+      fill="#2F333D"
+      fillRule="evenodd"
+    />
+  </svg>
   <input
-    checked={false}
+    checked={undefined}
     className="sc-bwzfXH ewegQT"
     disabled={undefined}
     onChange={[Function]}
-    onClick={[Function]}
     type="checkbox"
-    value={false}
+    value={undefined}
   />
 </span>
 `;
 
 exports[`<Checkbox /> renders styled span element with input 1`] = `
-.gdWaqZ {
+.iZWgNL {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -191,6 +233,7 @@ exports[`<Checkbox /> renders styled span element with input 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   margin-right: 7px;
   border: 1px solid #999;
   border-radius: 4px;
@@ -200,7 +243,11 @@ exports[`<Checkbox /> renders styled span element with input 1`] = `
   font-size: 12px;
 }
 
-.gdWaqZ:hover:not([disabled]) {
+.iZWgNL svg {
+  opacity: 0;
+}
+
+.iZWgNL:hover:not([disabled]) {
   border-color: #000;
 }
 
@@ -214,20 +261,34 @@ exports[`<Checkbox /> renders styled span element with input 1`] = `
 }
 
 <span
-  checked={false}
-  className="sc-bdVaJa gdWaqZ"
+  checked={undefined}
+  className="sc-bdVaJa iZWgNL"
   disabled={undefined}
   size={undefined}
 >
+  <svg
+    height="7"
+    viewBox="0 0 9 7"
+    width="9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      P
+    </title>
+    <path
+      d="M8.807.477A.625.625 0 0 0 8.35.283a.57.57 0 0 0-.44.194L3.217 5.17 1.09 3.043a.596.596 0 0 0-.44-.176.657.657 0 0 0-.457.176A.625.625 0 0 0 0 3.5c0 .176.064.328.193.457L2.76 6.523a.625.625 0 0 0 .457.194.57.57 0 0 0 .44-.194l5.15-5.15a.615.615 0 0 0 0-.896z"
+      fill="#2F333D"
+      fillRule="evenodd"
+    />
+  </svg>
   <input
-    checked={false}
+    checked={undefined}
     className="sc-bwzfXH ewegQT"
     disabled={undefined}
     name="test"
     onChange={[Function]}
-    onClick={[Function]}
     type="checkbox"
-    value={false}
+    value={undefined}
   />
 </span>
 `;

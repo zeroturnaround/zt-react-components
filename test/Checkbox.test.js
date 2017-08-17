@@ -21,15 +21,6 @@ describe("<Checkbox />", function() {
         expect(renderer.create(<Checkbox size="large" />)).toMatchSnapshot();
     });
 
-    it("stops input event propagation on click", function() {
-        const checkbox = renderer.create(<Checkbox name="test" />);
-        const stopPropagation = jasmine.createSpy("stopPropagation");
-
-        checkbox.toJSON().children[0].props.onClick({stopPropagation});
-
-        expect(stopPropagation).toHaveBeenCalled();
-    });
-
     it("changes checked state if checked is change from the outside", function() {
         const renderer = new ShallowRenderer();
         renderer.render(<Checkbox checked={true} />);
