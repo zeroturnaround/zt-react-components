@@ -8,6 +8,7 @@ const CheckboxElement = styled.span`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     margin-right: 7px;
 
@@ -19,6 +20,10 @@ const CheckboxElement = styled.span`
     width: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
     height: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
     font-size: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
+
+    svg {
+        opacity: ${({checked}) => checked ? 1 : 0}
+    }
 
     &:hover:not([disabled]) {
         border-color: #000;
@@ -44,6 +49,7 @@ export default class Checkbox extends PureComponent {
     static propTypes = {
         size: PropTypes.oneOf(["small", "large"]),
         checked: PropTypes.bool,
+        defaultChecked: PropTypes.bool,
         disabled: PropTypes.bool,
         onChange: PropTypes.func
     };
@@ -52,7 +58,7 @@ export default class Checkbox extends PureComponent {
         super(props);
 
         this.state = {
-            isChecked: !!props.checked
+            isChecked: !!props.checked || props.defaultChecked
         };
     }
 
@@ -63,7 +69,6 @@ export default class Checkbox extends PureComponent {
     }
 
     onChange(evt) {
-        evt.stopPropagation();
         const {onChange} = this.props;
 
         if (this.props.checked === undefined) {
@@ -83,7 +88,7 @@ export default class Checkbox extends PureComponent {
                 size={size}
                 disabled={disabled}
             >
-                {isChecked && <Checkmark />}
+                <Checkmark />
 
                 <Input
                     {...props}
@@ -91,7 +96,6 @@ export default class Checkbox extends PureComponent {
                     value={isChecked}
                     checked={isChecked}
                     onChange={this.onChange.bind(this)}
-                    onClick={ evt => evt.stopPropagation() }
                     disabled={disabled}
                 />
             </CheckboxElement>
