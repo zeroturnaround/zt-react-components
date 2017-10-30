@@ -8,6 +8,7 @@ const CheckboxElement = styled.span`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     margin-right: 7px;
 
@@ -20,9 +21,22 @@ const CheckboxElement = styled.span`
     height: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
     font-size: ${({size}) => size === "large" ? fontSizes.slightlyLarger : fontSizes.default};
 
-    label:hover > &:not([disabled]) {
+    svg {
+        opacity: ${({checked}) => checked ? 1 : 0}
+    }
+
+    &:hover:not([disabled]) {
         border-color: #000;
     }
+`;
+
+const Input = styled.input`
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
 `;
 
 /**
@@ -30,46 +44,61 @@ const CheckboxElement = styled.span`
  * - a bit larger,
  * - disabled,
  * - and of course checked.
- *
- * NOTE: Render it inside of label to enable unbelievable hover styles.
- *
- * NOTE: Give it a name and you will get a hidden input for free!
- * Hidden input is for forms where it is needed to post form data.
- *
- * NOTE: Click on hidden input stops propagation because of IE:
- * by default clicking on a label will make the event to propagate to a child input.
- * Then the input will bubble it back to the label, causing another click event.
  */
 export default class Checkbox extends PureComponent {
     static propTypes = {
-        name: PropTypes.string,
-        // small or large
-        size: PropTypes.string,
+        size: PropTypes.oneOf(["small", "large"]),
         checked: PropTypes.bool,
-        disabled: PropTypes.bool
+        defaultChecked: PropTypes.bool,
+        disabled: PropTypes.bool,
+        onChange: PropTypes.func
     };
 
-    render() {
-        return (
-            <CheckboxElement
-                checked={this.props.checked}
-                size={this.props.size}
-                disabled={this.props.disabled}
-            >
-                {this.props.checked && <Checkmark />}
-                {this.props.name && this.renderHiddenInput()}
-            </CheckboxElement>
-        );
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isChecked: !!props.checked || props.defaultChecked
+        };
     }
 
-    renderHiddenInput() {
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.checked !== this.props.checked) {
+            this.setState({isChecked: nextProps.checked});
+        }
+    }
+
+    onChange(evt) {
+        const {onChange} = this.props;
+
+        if (this.props.checked === undefined) {
+            this.setState({isChecked: evt.target.checked});
+        }
+
+        onChange && onChange(evt);
+    }
+
+    render() {
+        const { size, disabled, ...props } = this.props;
+        const { isChecked } = this.state;
+
         return (
-            <input
-                type="hidden"
-                name={this.props.name}
-                value={this.props.checked}
-                onClick={(event) => event.stopPropagation()}
-            />
+            <CheckboxElement
+                checked={isChecked}
+                size={size}
+                disabled={disabled}
+            >
+                <Checkmark />
+
+                <Input
+                    {...props}
+                    type="checkbox"
+                    value={isChecked}
+                    checked={isChecked}
+                    onChange={this.onChange.bind(this)}
+                    disabled={disabled}
+                />
+            </CheckboxElement>
         );
     }
 }
