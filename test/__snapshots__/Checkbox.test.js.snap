@@ -115,7 +115,7 @@ exports[`<Checkbox /> renders disabled 1`] = `
 }
 
 <span
-  checked={undefined}
+  checked={false}
   className="sc-bdVaJa hNthpQ"
   disabled={true}
   size={undefined}
@@ -136,12 +136,12 @@ exports[`<Checkbox /> renders disabled 1`] = `
     />
   </svg>
   <input
-    checked={undefined}
+    checked={false}
     className="sc-bwzfXH ewegQT"
     disabled={true}
     onChange={[Function]}
     type="checkbox"
-    value={undefined}
+    value={false}
   />
 </span>
 `;
@@ -188,7 +188,7 @@ exports[`<Checkbox /> renders larger 1`] = `
 }
 
 <span
-  checked={undefined}
+  checked={false}
   className="sc-bdVaJa gDgQzI"
   disabled={undefined}
   size="large"
@@ -209,12 +209,12 @@ exports[`<Checkbox /> renders larger 1`] = `
     />
   </svg>
   <input
-    checked={undefined}
+    checked={false}
     className="sc-bwzfXH ewegQT"
     disabled={undefined}
     onChange={[Function]}
     type="checkbox"
-    value={undefined}
+    value={false}
   />
 </span>
 `;
@@ -261,7 +261,7 @@ exports[`<Checkbox /> renders styled span element with input 1`] = `
 }
 
 <span
-  checked={undefined}
+  checked={false}
   className="sc-bdVaJa iZWgNL"
   disabled={undefined}
   size={undefined}
@@ -282,13 +282,13 @@ exports[`<Checkbox /> renders styled span element with input 1`] = `
     />
   </svg>
   <input
-    checked={undefined}
+    checked={false}
     className="sc-bwzfXH ewegQT"
     disabled={undefined}
     name="test"
     onChange={[Function]}
     type="checkbox"
-    value={undefined}
+    value={false}
   />
 </span>
 `;
