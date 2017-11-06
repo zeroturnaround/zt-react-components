@@ -58,7 +58,7 @@ export default class Checkbox extends PureComponent {
         super(props);
 
         this.state = {
-            isChecked: !!props.checked || props.defaultChecked
+            isChecked: !!props.checked || !!props.defaultChecked
         };
     }
 
@@ -79,7 +79,9 @@ export default class Checkbox extends PureComponent {
     }
 
     render() {
-        const { size, disabled, ...props } = this.props;
+        // picking out defaultChecked since we do not want to apply defaultChecked together with checked.
+        // eslint-disable-next-line no-unused-vars
+        const { size, disabled, defaultChecked, ...props } = this.props;
         const { isChecked } = this.state;
 
         return (
