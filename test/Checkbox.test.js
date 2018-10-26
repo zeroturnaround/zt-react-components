@@ -13,6 +13,10 @@ describe("<Checkbox />", function() {
         expect(renderer.create(<Checkbox checked={true} />)).toMatchSnapshot();
     });
 
+    it("renders error", function() {
+        expect(renderer.create(<Checkbox error={true} />)).toMatchSnapshot();
+    });
+
     it("renders disabled", function() {
         expect(renderer.create(<Checkbox disabled={true} />)).toMatchSnapshot();
     });
