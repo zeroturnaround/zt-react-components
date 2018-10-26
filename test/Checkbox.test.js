@@ -25,6 +25,10 @@ describe("<Checkbox />", function() {
         expect(renderer.create(<Checkbox size="large" />)).toMatchSnapshot();
     });
 
+    it("allows the styles to be overriden", function() {
+        expect(renderer.create(<Checkbox className="custom-class" />)).toMatchSnapshot();
+    });
+
     it("changes checked state if checked is change from the outside", function() {
         const renderer = new ShallowRenderer();
         renderer.render(<Checkbox checked={true} />);

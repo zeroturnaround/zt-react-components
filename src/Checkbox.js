@@ -63,7 +63,8 @@ export default class Checkbox extends PureComponent {
         defaultChecked: PropTypes.bool,
         disabled: PropTypes.bool,
         error: PropTypes.bool,
-        onChange: PropTypes.func
+        onChange: PropTypes.func,
+        className: PropTypes.string,
     };
 
     constructor(props) {
@@ -93,11 +94,12 @@ export default class Checkbox extends PureComponent {
     render() {
         // picking out defaultChecked since we do not want to apply defaultChecked together with checked.
         // eslint-disable-next-line no-unused-vars
-        const { size, disabled, defaultChecked, error, ...props } = this.props;
+        const { size, disabled, defaultChecked, error, className, ...props } = this.props;
         const { isChecked } = this.state;
 
         return (
             <CheckboxElement
+                className={className}
                 checked={isChecked}
                 error={error}
                 size={size}
