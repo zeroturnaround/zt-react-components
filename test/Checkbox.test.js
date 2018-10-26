@@ -13,12 +13,20 @@ describe("<Checkbox />", function() {
         expect(renderer.create(<Checkbox checked={true} />)).toMatchSnapshot();
     });
 
+    it("renders error", function() {
+        expect(renderer.create(<Checkbox error={true} />)).toMatchSnapshot();
+    });
+
     it("renders disabled", function() {
         expect(renderer.create(<Checkbox disabled={true} />)).toMatchSnapshot();
     });
 
     it("renders larger", function() {
         expect(renderer.create(<Checkbox size="large" />)).toMatchSnapshot();
+    });
+
+    it("allows the styles to be overriden", function() {
+        expect(renderer.create(<Checkbox className="custom-class" />)).toMatchSnapshot();
     });
 
     it("changes checked state if checked is change from the outside", function() {

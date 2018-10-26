@@ -4,6 +4,17 @@ import styled from "styled-components";
 import {borderRadiuses, colors, fontSizes} from "./designGuideline";
 import Checkmark from "./icons/checkmark.svg";
 
+const getBorderColor = ({checked, error}) => {
+    if (error) {
+        return colors.red;
+    }
+    else if (checked) {
+        return colors.black;
+    }
+
+    return colors.gray;
+};
+
 const CheckboxElement = styled.span`
     display: inline-flex;
     align-items: center;
@@ -12,7 +23,7 @@ const CheckboxElement = styled.span`
 
     margin-right: 7px;
 
-    border: 1px solid ${({checked}) => checked ? colors.black : colors.gray};
+    border: 1px solid ${getBorderColor};
     border-radius: ${borderRadiuses.default};
 
     background-color: ${({disabled}) => disabled && colors.darkerWhite};
@@ -51,7 +62,9 @@ export default class Checkbox extends PureComponent {
         checked: PropTypes.bool,
         defaultChecked: PropTypes.bool,
         disabled: PropTypes.bool,
-        onChange: PropTypes.func
+        error: PropTypes.bool,
+        onChange: PropTypes.func,
+        className: PropTypes.string,
     };
 
     constructor(props) {
@@ -81,12 +94,14 @@ export default class Checkbox extends PureComponent {
     render() {
         // picking out defaultChecked since we do not want to apply defaultChecked together with checked.
         // eslint-disable-next-line no-unused-vars
-        const { size, disabled, defaultChecked, ...props } = this.props;
+        const { size, disabled, defaultChecked, error, className, ...props } = this.props;
         const { isChecked } = this.state;
 
         return (
             <CheckboxElement
+                className={className}
                 checked={isChecked}
+                error={error}
                 size={size}
                 disabled={disabled}
             >
