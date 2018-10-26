@@ -7,6 +7,7 @@ const colors = {
     darkerWhite: "#f3f3f3",
     gray: "#999",
     black: "#000",
+    red: "#cd4936",
 };
 
 const fontSizes = {
